@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Restoff-Table Reservation</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Restoff</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header><br><br><br><br><br>
+    <div class="reservation-container">
+        <h2>You're on the right choice.</h2>
+        <h2>Reserve Your Table 🍽️</h2>
+        <form action="https://formspree.io/f/mgvzjwdk" method="POST">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+            <label for="date">Reservation Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time</label>
+            <select id="time" name="time" required></select>
+
+
+
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6+">6+ Guests</option>
+            </select>
+
+            <label for="message">Special Requests</label>
+            <textarea id="message" name="message" rows="3" placeholder="Any special request?"></textarea>
+
+            <label>Seating Preference</label><br>
+            <input type="radio" id="AC" name="seating" value="AC" required>
+            <label for="AC">AC Hall</label><br>
+
+            <input type="radio" id="non-AC" name="seating" value="non-AC">
+            <label for="non-AC">Non-AC Hall</label><br>
+
+            <button id="Submitreservation" type="submit">Reserve Table</button>
+            <button id="cancelreservation" type="reset">Cancel Table</button>
+        </form>
+    </div>
+    <footer class="footer"><br>
+        &copy; 2025 Hotel Restoff || All right reserved.
+    </footer><br><br>
+    <script src="hotel.js"></script>
+</body>
+
+</html>
