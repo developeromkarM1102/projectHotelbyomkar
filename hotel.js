@@ -1,82 +1,93 @@
-window.onload = function () {
+// ✅ Show welcome alert (only on Home page)
+window.addEventListener("load", function () {
     if (document.body.id === "Home") {
         setTimeout(function () {
             alert("Welcome to the Hotel Restoff!");
         }, 1000);
     }
-};
-window.onload = function () {
+});
+
+// ✅ Set min date (today onwards) for reservation form
+window.addEventListener("load", function () {
     let today = new Date().toISOString().split("T")[0];
-    document.getElementById("date").setAttribute("min", today);
-};
+    const dateInput = document.getElementById("date");
+    if (dateInput) {
+        dateInput.setAttribute("min", today);
+    }
+});
+
+// ✅ Time slots from 8:00 AM to 11:45 PM (15 min interval)
 const select = document.getElementById("time");
-for (let hour = 8; hour <= 23; hour++) {
-    for (let min = 0; min < 60; min += 15) {
-        let h = hour.toString().padStart(2, "0");
-        let m = min.toString().padStart(2, "0");
-        let value = `${h}:${m}`;
+if (select) {
+    for (let hour = 8; hour <= 23; hour++) {
+        for (let min = 0; min < 60; min += 15) {
+            let h = hour.toString().padStart(2, "0");
+            let m = min.toString().padStart(2, "0");
+            let value = `${h}:${m}`;
 
-        // Convert to AM/PM format for display
-        let displayHour = (hour % 12) || 12;
-        let ampm = hour < 12 ? "AM" : "PM";
-        let label = `${displayHour}:${m} ${ampm}`;
+            // Convert to AM/PM format
+            let displayHour = (hour % 12) || 12;
+            let ampm = hour < 12 ? "AM" : "PM";
+            let label = `${displayHour}:${m} ${ampm}`;
 
-        let option = document.createElement("option");
-        option.value = value;
-        option.textContent = label;
-        select.appendChild(option);
+            let option = document.createElement("option");
+            option.value = value;
+            option.textContent = label;
+            select.appendChild(option);
+        }
     }
 }
 
-
+// ✅ Search functionality with "no result" message
 const searchInput = document.getElementById("searchInput");
 const sections = document.querySelectorAll(".menu-container");
 
-searchInput.addEventListener("keyup", function () {
-    const filter = searchInput.value.toLowerCase();
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
 
-    sections.forEach(section => {
-        const cards = section.querySelectorAll(".menu-card");
-        let foundInSection = false;
+        sections.forEach(section => {
+            const cards = section.querySelectorAll(".menu-card");
+            let foundInSection = false;
 
-        cards.forEach(card => {
-            const dishName = card.querySelector("h3").textContent.toLowerCase();
-            const dishDesc = card.querySelector("p").textContent.toLowerCase();
+            cards.forEach(card => {
+                const dishName = card.querySelector("h3").textContent.toLowerCase();
+                const dishDesc = card.querySelector("p").textContent.toLowerCase();
 
-            if (dishName.includes(filter) || dishDesc.includes(filter)) {
-                card.style.display = "block";
-                foundInSection = true;
+                if (dishName.includes(filter) || dishDesc.includes(filter)) {
+                    card.style.display = "block";
+                    foundInSection = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Create "No result" message
+            let noResultMsg = section.querySelector(".no-result");
+            if (!noResultMsg) {
+                noResultMsg = document.createElement("div");
+                noResultMsg.classList.add("no-result");
+                noResultMsg.textContent = "❌ Sorry! Dishes are not available right now.";
+                noResultMsg.style.flexBasis = "100%";
+                noResultMsg.style.textAlign = "center";
+                noResultMsg.style.margin = "20px 0";
+                noResultMsg.style.fontWeight = "bold";
+                noResultMsg.style.color = "white";
+                noResultMsg.style.display = "none";
+                section.appendChild(noResultMsg);
+            }
+
+            // Show or hide message
+            if (!foundInSection && filter !== "") {
+                noResultMsg.style.display = "block";
             } else {
-                card.style.display = "none";
+                noResultMsg.style.display = "none";
             }
         });
-
-        // Create a "No results" message if not already present
-        let noResultMsg = section.querySelector(".no-result");
-        if (!noResultMsg) {
-            noResultMsg = document.createElement("div");
-            noResultMsg.classList.add("no-result");
-            noResultMsg.textContent = "❌ Sorry! Dishes are not available right now.";
-            noResultMsg.style.flexBasis = "100%";
-            noResultMsg.style.textAlign = "center";
-            noResultMsg.style.margin = "20px 0";
-            noResultMsg.style.fontWeight = "bold";
-            noResultMsg.style.color = "white";
-            noResultMsg.style.display = "none";
-            section.appendChild(noResultMsg);
-        }
-
-        // Show or hide the message
-        if (!foundInSection && filter !== "") {
-            noResultMsg.style.display = "block";
-        } else {
-            noResultMsg.style.display = "none";
-        }
     });
-});
+}
 
-
-
+// ✅ Order system
 const addButtons = document.querySelectorAll(".add-btn");
 const cancelButtons = document.querySelectorAll(".cancel-btn");
 const orderText = document.getElementById("orderText");
@@ -90,19 +101,17 @@ addButtons.forEach(button => {
         const dishName = card.querySelector("h3").textContent;
         const qty = parseInt(card.querySelector(".qty-input").value) || 1;
 
-        // Check if already in order
         const existing = orders.find(o => o.name === dishName);
         if (existing) {
-            existing.qty += qty; // increase qty
+            existing.qty += qty;
         } else {
             orders.push({ name: dishName, qty: qty });
         }
 
         updateOrderText();
-        showToast(` ${dishName} X ${qty}  added to your order ✅`);
+        showToast(` ${dishName} × ${qty} added to your order ✅`);
     });
 });
-
 
 // Cancel order
 cancelButtons.forEach(button => {
@@ -121,10 +130,11 @@ cancelButtons.forEach(button => {
     });
 });
 
-
 // Update order box
 function updateOrderText() {
-    orderText.value = orders.map(o => `${o.qty} x ${o.name}`).join("\n");
+    if (orderText) {
+        orderText.value = orders.map(o => `${o.qty} x ${o.name}`).join("\n");
+    }
 }
 
 // Toast message
@@ -148,6 +158,7 @@ function showToast(message) {
     setTimeout(() => toast.remove(), 2000);
 }
 
+// Quantity increase/decrease
 function increaseQty(btn) {
     let qtyInput = btn.parentElement.querySelector(".qty-input");
     qtyInput.value = parseInt(qtyInput.value) + 1;
@@ -160,5 +171,3 @@ function decreaseQty(btn) {
         qtyInput.value = currentValue - 1;
     }
 }
-
-
