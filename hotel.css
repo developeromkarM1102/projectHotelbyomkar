@@ -1,12 +1,13 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: url("bg-hotel.jpg");
-  background-size:cover;
+  background-size: cover;
   height: auto;
   width: auto;
   color: white;
@@ -27,7 +28,7 @@ body::before {
 
 /* Header */
 header {
-  background:black;
+  background: black;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -119,7 +120,7 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.footer{
+.footer {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: large;
@@ -243,22 +244,26 @@ em {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+
   h2 {
     color: whitesmoke;
   }
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 .form input,
 .form textarea {
   width: 100%;
@@ -282,8 +287,8 @@ em {
 .form button {
   width: 50%;
   padding: 14px;
-  color:black;
-  background-color:#2cdef2;
+  color: black;
+  background-color: #2cdef2;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -291,27 +296,29 @@ em {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .btnform {
-    display: flex;
-    gap: 10px; 
-    margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-#submitorder{
-background-color: rgb(81, 243, 78);
+#submitorder {
+  background-color: rgb(81, 243, 78);
 }
-#submitorder:hover
-{
-  background:rgb(244, 173, 21);
+
+#submitorder:hover {
+  background: rgb(244, 173, 21);
   animation: forwards;
 }
-#clearorder{
+
+#clearorder {
   color: whitesmoke;
-background-color: rgb(253, 64, 70);
+  background-color: rgb(253, 64, 70);
 }
-#clearorder:hover
-{
-  background:rgb(18, 244, 86);
+
+#clearorder:hover {
+  background: rgb(18, 244, 86);
   animation: forwards;
 }
 
@@ -380,7 +387,7 @@ background-color: rgb(253, 64, 70);
 }
 
 .menu-card {
-  background: linear-gradient(132deg, #000000,#94f294c8, #7f7ff7,#f96fb4,#f57979,#ffffff);
+  background: linear-gradient(132deg, #000000, #94f294c8, #7f7ff7, #f96fb4, #f57979, #ffffff);
   background-size: 400% 400%;
   animation: BackgroundGradient 15s ease infinite;
   padding: 15px;
@@ -390,10 +397,19 @@ background-color: rgb(253, 64, 70);
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
 @keyframes BackgroundGradient {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .menu-card img {
@@ -407,7 +423,7 @@ background-color: rgb(253, 64, 70);
   margin: 10px 0;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
-  color:white;
+  color: white;
   font-weight: bold;
 }
 
@@ -417,7 +433,7 @@ background-color: rgb(253, 64, 70);
   color: black;
   font-size: 14px;
   margin-bottom: 8px;
-  position:unset;
+  position: unset;
 }
 
 .menu-card span {
@@ -428,7 +444,7 @@ background-color: rgb(253, 64, 70);
   font-weight: bold;
   color: black;
   border-color: black;
-  
+
 }
 
 .menu-card label {
@@ -446,15 +462,22 @@ background-color: rgb(253, 64, 70);
   border-style: groove;
   border-radius: 8px;
 }
-.qty-input{
+
+.qty-input {
   color: black;
-  width: 50px;                /* small width for numbers */
-  padding-top: 2px;          /* inner spacing */
-  font-size: 16px;            /* readable font */
+  width: 50px;
+  /* small width for numbers */
+  padding-top: 2px;
+  /* inner spacing */
+  font-size: 16px;
+  /* readable font */
   font-weight: 500;
-  text-align: center;         /* center the number */
-  border: 2px solid #ccc;     /* light border */
-  border-radius: 6px;         /* smooth rounded corners */
+  text-align: center;
+  /* center the number */
+  border: 2px solid #ccc;
+  /* light border */
+  border-radius: 6px;
+  /* smooth rounded corners */
   outline: none;
 }
 
@@ -495,6 +518,7 @@ background-color: rgb(253, 64, 70);
   color: white;
   cursor: pointer;
 }
+
 .cancel-btn:hover {
   background-color: #bd31fd;
   transform: scale(1.05);
@@ -507,12 +531,52 @@ background-color: rgb(253, 64, 70);
 }
 
 .no-result {
-  grid-column: 1 / -1;   /* span across all columns */
+  grid-column: 1 / -1;
+  /* span across all columns */
   text-align: center;
   margin: 20px 0;
   font-weight: bold;
   color: white;
 }
+
+.go-to-cart {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: #feea0f;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.go-to-cart:hover {
+  background: #e5533d;
+}
+
+.categories {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.categories button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eee;
+  transition: 0.3s;
+}
+
+.categories button.active,
+.categories button:hover {
+  background: #f0fb20;
+  color:black;
+}
+
 
 
 
@@ -628,15 +692,17 @@ background-color: rgb(253, 64, 70);
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -652,13 +718,13 @@ background-color: rgb(253, 64, 70);
 .reservation-container textarea {
   width: 100%;
   padding: 12px;
-  margin-top: 8px; 
+  margin-top: 8px;
   border: none;
   border-radius: 8px;
   font-size: 15px;
   outline: none;
-  display: block;    
-  box-sizing: border-box; 
+  display: block;
+  box-sizing: border-box;
 }
 
 
@@ -686,13 +752,14 @@ background-color: rgb(253, 64, 70);
   margin-top: 10px;
   display: inline-block;
 }
+
 /* Hide the default radio */
 input[type="radio"] {
   display: none;
 }
 
 /* Style the labels as buttons */
-input[type="radio"] + label {
+input[type="radio"]+label {
   display: inline-block;
   padding: 12px 25px;
   margin: 10px;
@@ -706,16 +773,16 @@ input[type="radio"] + label {
 }
 
 /* On hover */
-input[type="radio"] + label:hover {
+input[type="radio"]+label:hover {
   background: rgba(247, 197, 49, 0.2);
   transform: scale(1.05);
 }
 
 /* When selected */
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
   background: #f7c531;
   color: #000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -745,7 +812,7 @@ input[type="radio"]:checked + label {
 
 #contact {
   color: #2cdef2;
-  
+
 }
 
 #contactlogo {
@@ -754,7 +821,7 @@ input[type="radio"]:checked + label {
 
 }
 
-#contactlogo img a{
+#contactlogo img a {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: row;
@@ -769,14 +836,12 @@ input[type="radio"]:checked + label {
 }
 
 @media (max-width: 600px) {
-  #contactlogo img a{
+  #contactlogo img a {
     margin-left: 15px;
     margin-right: 15px;
   }
-  }
-.Map a{
-  color: #2cdef2;
 }
 
-
-
+.Map a {
+  color: #2cdef2;
+}

@@ -2,596 +2,586 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Restoff - OrderMenu</title>
-    <link rel="stylesheet" href="hotel.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Restoff - OrderMenu</title>
+  <link rel="stylesheet" href="hotel.css">
 </head>
 
 <body>
-    <header>
-        <h1>Hotel Restoff</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="order.html">Order Now</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header><br><br><br><br>
+  <header>
+    <h1>Hotel Restoff</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="order.html">Order Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header><br><br><br><br>
 
-    <div><br><br>
-        <p>Scroll Down over the menu</p>
-        <p>to See all the Dish</p>
-        <p>After add to Order <span>Submit</span> the Order Below.</p>
-    </div>
-    <section class="menu">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for a dish...">
-        </div>
 
-        <h2>Starters🥗</h2><br><br>
-        <div class="menu-container">
-
-            <div class="menu-card">
-                <img src="veg-manch.jpeg" loading="lazy" alt="veg-manch">
-                <h3>Veg Manchurian</h3>
-                <p>Filled with taste and spice.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-
-            <div class="menu-card">
-                <img src="paneer-chili.jpeg" loading="lazy" alt="paneer-chili">
-                <h3>Paneer Chilli Dry</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-
-            <div class="menu-card">
-                <img src="hara-bhara-kabeeb.jpeg" loading="lazy" alt="hara-bhara-kabeeb">
-                <h3>Hara Bhara Kebab</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="spring-roll.jpeg" loading="lazy" alt="spring-roll">
-                <h3>Veg Spring Roll</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="masalapapad.jpeg" loading="lazy" alt="masalapapad">
-                <h3>Masala Papad</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="corn-cheese.jpeg" loading="lazy" alt="corn-cheese">
-                <h3>Corn Cheese Balls</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="Tandoori-mushroom.JPG" loading="lazy" alt="Tandoori-mushroom">
-                <h3>Tandoori Mushroom</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-        </div><br><br>
-
-        <h2>Our Menu 🍴</h2><br><br>
-        <div class="menu-container">
-
-            <div class="menu-card">
-                <img src="veg-thal.jpeg" loading="lazy" alt="Veg Thali">
-                <h3>Veg Thali</h3>
-                <p>A traditional Indian thali with dal, roti, sabzi & sweets.</p>
-                <span>₹250/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="paneer.jpeg" loading="lazy" alt="Paneer">
-                <h3>Butter Paneer</h3>
-                <p>Delicious and tasty Paneer.</p>
-                <span>₹350/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-            <div class="menu-card">
-                <img src="paneer.jpeg" loading="lazy" alt="Paneer">
-                <h3>Butter Paneer Masala</h3>
-                <p>Delicious and tasty Paneer.</p>
-                <span>₹350/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-            <div class="menu-card">
-                <img src="paneer.jpeg" loading="lazy" alt="Paneer">
-                <h3>Mutter Paneer</h3>
-                <p>Delicious and tasty Paneer.</p>
-                <span>₹350/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="roti.jpeg" loading="lazy" alt="roti">
-                <h3>Butter Roti</h3>
-                <p>Fresh, Hot Loaded with buttur.</p>
-                <span>₹200/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="kadai-paneer.jpeg" loading="lazy" alt="kadai-paneer">
-                <h3>Kadai Paneer</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-            <div class="menu-card">
-                <img src="veg-kolhapuri.jpeg" loading="lazy" alt="veg-kolhapuri">
-                <h3>Veg Kolhapuri</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="palak-paneer.JPG" loading="lazy" alt="palak-paneer">
-                <h3>Palak Paneer</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-            <div class="menu-card">
-                <img src="veg-handi.jpeg" loading="lazy" alt="veg-handi">
-                <h3>Veg Handi</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-            <div class="menu-card">
-                <img src="dal-tadka.jpeg" loading="lazy" alt="dal-tadka">
-                <h3>Dal Tadka</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹100/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-        </div><br><br>
-
-        <h2>Indian Breads</h2><br><br>
-        <div class="menu-container">
-
-            <div class="menu-card">
-                <img src="Tandoori.jpeg" loading="lazy" alt="Tandoori">
-                <h3>Tandoori Roti</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="butter-naan.jpeg" loading="lazy" alt="butter-naan">
-                <h3>Butter Naan</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="garlic-naan.jpeg" loading="lazy" alt="garlic-naan">
-                <h3>Garlic Naan</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="Cheese-naan.jpeg" loading="lazy" alt="Cheese-naan">
-                <h3>Cheese Naan</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="laccha-paratha.jpeg" loading="lazy" alt="laccha-paratha">
-                <h3>Laccha Paratha</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="plain-paratha.jpeg" loading="lazy" alt="plain-paratha">
-                <h3>Plain Paratha</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-
-            </div>
-        </div><br>
-
-        <h2>Rice & Biryani🍚</h2><br><br>
-        <div class="menu-container">
-            <div class="menu-card">
-                <img src="jeera-rice.jpg" loading="lazy" alt="jeera-rice">
-                <h3>Jeera Rice</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="friedrice.jpg" loading="lazy" alt="friedrice">
-                <h3>Veg Fried Rice</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="veg-pulao.jpeg" loading="lazy" alt="veg-pulao">
-                <h3>Veg Pulao</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="veg-biryani.jpg" loading="lazy" alt="veg-biryani">
-                <h3>Veg Biryani</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="curd-rice.jpeg" loading="lazy" alt="curd-rice">
-                <h3>Curd Rice</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="plain-ric.jpeg" loading="lazy" alt="plain-ric">
-                <h3>Plain Rice</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-        </div><br><br>
-        <h2>Desserts🍨</h2><br><br>
-        <div class="menu-container">
-            <div class="menu-card">
-                <img src="ice-cream.jpeg" loading="lazy" alt="ice-cream">
-                <h3>Ice Cream (Vanilla / Chocolate / Mango)</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="gulabjamun.jpg" loading="lazy" alt="gulabjamun">
-                <h3>Gulab Jamun</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="Rasgulla.jpeg" loading="lazy" alt="Rasgulla">
-                <h3>Rasgulla</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="Rasmalai.jpg" loading="lazy" alt="Rasmalai">
-                <h3>Rasmalai</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="gajar-halwa.jpeg" loading="lazy" alt="gajar-halwa">
-                <h3>Gajar Halwa</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="kulfi.jpeg" loading="lazy" alt="kulfi">
-                <h3>Kesar Kulfi</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-        </div><br><br>
-
-        <h2> Beverages🥤</h2><br><br>
-        <div class="menu-container">
-            <div class="menu-card">
-                <img src="lime-soda.jpeg" loading="lazy" alt="lime-soda">
-                <h3>Fresh Lime Soda</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="buttermilk.jpeg" loading="lazy" alt="buttermilk">
-                <h3>Buttermilk (Chaas)</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="lassi.jpg" loading="lazy" alt="lassi">
-                <h3>Sweet Lassi / Salt Lassi</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="chai.jpeg" loading="lazy" alt="chai">
-                <h3>Masala Chai</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-            <div class="menu-card">
-                <img src="coffie.jpeg" loading="lazy" alt="coffie">
-                <h3>Cold Coffee</h3>
-                <p>Smooth And tasty.</p>
-                <span>₹50/-</span><br><br>
-                <label for="qty">Qty:</label>
-                <button type="button" onclick="decreaseQty(this)">-</button>
-                <input type="number" class="qty-input" min="1" value="1">
-                <button type="button" onclick="increaseQty(this)">+</button><br><br>
-                <button type="button" class="cancel-btn">Cancel Order</button>
-                <button class="add-btn">Add to Order</button>
-            </div>
-        </div>
-    </section>
-    <br><br><br>
+  <section class="menu">
+    <!-- Search & Categories -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder=" 🔍 Search for a dish...">
+    </div><br><br>
     
-    <div class="form">
-        <h2>Order What you want..</h2>
-        <form action="https://formspree.io/f/mgvzjwdk" method="POST">
-            <input type="text" id="name" name="name"  placeholder="Your Name" required>
-            <input type="text" name="tableNo" placeholder="Table No." required>
-            <textarea name="order" id="orderText" placeholder="Put Your Order here :" required></textarea>
-            <div class="btnform">
-                <button id="submitorder" type="submit">Submit Order</button>
-                <button id="clearorder" type="reset">Clear Order</button>
-            </div>
-        </form>
-    </div><br>
+    <div class="categories">
+      <button class="active" onclick="filterMenu('all')">All</button>
+      <button onclick="filterMenu('starters')">Starters</button>
+      <button onclick="filterMenu('main')">Main Course</button>
+      <button onclick="filterMenu('bread')">Breads</button>
+      <button onclick="filterMenu('rice')">Rice</button>
+      <button onclick="filterMenu('desserts')">Desserts</button>
+      <button onclick="filterMenu('drinks')">Drinks</button>
+    </div><br><br>
+    
+    <button class="go-to-cart" onclick="document.getElementById('orderForm').scrollIntoView({behavior: 'smooth'})">
+      🛒 Go to Your Order.
+    </button><br><br>
+    <div class="menu-container">
+      <div class="menu-card starters">
+        <img src="veg-manch.jpeg" alt="veg-manch">
+        <h3>Veg Manchurian</h3>
+        <p>Filled with taste and spice.</p>
+        <span>₹100/-</span>
+        <label>Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button><br>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="paneer-chili.jpeg" loading="lazy" alt="paneer-chili">
+        <h3>Paneer Chilli Dry</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button><br>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="hara-bhara-kabeeb.jpeg" loading="lazy" alt="hara-bhara-kabeeb">
+        <h3>Hara Bhara Kebab</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="spring-roll.jpeg" loading="lazy" alt="spring-roll">
+        <h3>Veg Spring Roll</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="masalapapad.jpeg" loading="lazy" alt="masalapapad">
+        <h3>Masala Papad</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="corn-cheese.jpeg" loading="lazy" alt="corn-cheese">
+        <h3>Corn Cheese Balls</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card starters">
+        <img src="Tandoori-mushroom.JPG" loading="lazy" alt="Tandoori-mushroom">
+        <h3>Tandoori Mushroom</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="veg-thal.jpeg" loading="lazy" alt="Veg Thali">
+        <h3>Veg Thali</h3>
+        <p>A traditional Indian thali with dal, roti, sabzi & sweets.</p>
+        <span>₹250/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="paneer.jpeg" loading="lazy" alt="Paneer">
+        <h3>Butter Paneer</h3>
+        <p>Delicious and tasty Paneer.</p>
+        <span>₹350/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="paneer.jpeg" loading="lazy" alt="Paneer">
+        <h3>Butter Paneer Masala</h3>
+        <p>Delicious and tasty Paneer.</p>
+        <span>₹350/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="paneer.jpeg" loading="lazy" alt="Paneer">
+        <h3>Mutter Paneer</h3>
+        <p>Delicious and tasty Paneer.</p>
+        <span>₹350/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="roti.jpeg" loading="lazy" alt="roti">
+        <h3>Butter Roti</h3>
+        <p>Fresh, Hot Loaded with buttur.</p>
+        <span>₹200/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="kadai-paneer.jpeg" loading="lazy" alt="kadai-paneer">
+        <h3>Kadai Paneer</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="veg-kolhapuri.jpeg" loading="lazy" alt="veg-kolhapuri">
+        <h3>Veg Kolhapuri</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="palak-paneer.JPG" loading="lazy" alt="palak-paneer">
+        <h3>Palak Paneer</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="veg-handi.jpeg" loading="lazy" alt="veg-handi">
+        <h3>Veg Handi</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card main">
+        <img src="dal-tadka.jpeg" loading="lazy" alt="dal-tadka">
+        <h3>Dal Tadka</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹100/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="Tandoori.jpeg" loading="lazy" alt="Tandoori">
+        <h3>Tandoori Roti</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="butter-naan.jpeg" loading="lazy" alt="butter-naan">
+        <h3>Butter Naan</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="garlic-naan.jpeg" loading="lazy" alt="garlic-naan">
+        <h3>Garlic Naan</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="Cheese-naan.jpeg" loading="lazy" alt="Cheese-naan">
+        <h3>Cheese Naan</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="laccha-paratha.jpeg" loading="lazy" alt="laccha-paratha">
+        <h3>Laccha Paratha</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card bread">
+        <img src="plain-paratha.jpeg" loading="lazy" alt="plain-paratha">
+        <h3>Plain Paratha</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="jeera-rice.jpg" loading="lazy" alt="jeera-rice">
+        <h3>Jeera Rice</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="friedrice.jpg" loading="lazy" alt="friedrice">
+        <h3>Veg Fried Rice</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="veg-pulao.jpeg" loading="lazy" alt="veg-pulao">
+        <h3>Veg Pulao</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="veg-biryani.jpg" loading="lazy" alt="veg-biryani">
+        <h3>Veg Biryani</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="curd-rice.jpeg" loading="lazy" alt="curd-rice">
+        <h3>Curd Rice</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card rice">
+        <img src="plain-ric.jpeg" loading="lazy" alt="plain-ric">
+        <h3>Plain Rice</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="ice-cream.jpeg" loading="lazy" alt="ice-cream">
+        <h3>Ice Cream (Vanilla / Chocolate / Mango)</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="gulabjamun.jpg" loading="lazy" alt="gulabjamun">
+        <h3>Gulab Jamun</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="Rasgulla.jpeg" loading="lazy" alt="Rasgulla">
+        <h3>Rasgulla</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="Rasmalai.jpg" loading="lazy" alt="Rasmalai">
+        <h3>Rasmalai</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="gajar-halwa.jpeg" loading="lazy" alt="gajar-halwa">
+        <h3>Gajar Halwa</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card desserts">
+        <img src="kulfi.jpeg" loading="lazy" alt="kulfi">
+        <h3>Kesar Kulfi</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card drinks">
+        <img src="lime-soda.jpeg" loading="lazy" alt="lime-soda">
+        <h3>Fresh Lime Soda</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card drinks">
+        <img src="buttermilk.jpeg" loading="lazy" alt="buttermilk">
+        <h3>Buttermilk (Chaas)</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card drinks">
+        <img src="lassi.jpg" loading="lazy" alt="lassi">
+        <h3>Sweet Lassi / Salt Lassi</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card drinks">
+        <img src="chai.jpeg" loading="lazy" alt="chai">
+        <h3>Masala Chai</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+      <div class="menu-card drinks">
+        <img src="coffie.jpeg" loading="lazy" alt="coffie">
+        <h3>Cold Coffee</h3>
+        <p>Smooth And tasty.</p>
+        <span>₹50/-</span>
+        <label for="qty">Qty:</label>
+        <button type="button" onclick="decreaseQty(this)">-</button>
+        <input type="number" class="qty-input" min="1" value="1">
+        <button type="button" onclick="increaseQty(this)">+</button>
+        <button type="button" class="cancel-btn">Cancel Order</button>
+        <button class="add-btn">Add to Order</button>
+      </div>
+
+    </div>
+  </section>
+  <br><br><br>
+
+  <div class="form" id="orderForm">
+    <h2>Order What you want..</h2>
+    <form action="https://formspree.io/f/mgvzjwdk" method="POST">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="text" name="tableNo" placeholder="Table No." required>
+      <textarea name="order" id="orderText" placeholder="Put Your Order here :" required></textarea>
+      <div class="btnform">
+        <button id="submitorder" type="submit">Submit Order</button>
+        <button id="clearorder" type="reset">Clear Order</button>
+      </div>
+    </form>
+  </div><br>
 
 
-    <footer class="footer"><br>
-        &copy; 2025 Hotel Restoff || All right reserved.
-    </footer><br><br>
-    <script src="hotel.js"></script>
+  <footer class="footer"><br>
+    &copy; 2025 Hotel Restoff || All right reserved.
+  </footer><br><br>
+  <script src="hotel.js"></script>
 
 </body>
 

@@ -38,6 +38,19 @@ if (select) {
     }
 }
 
+function filterMenu(category) {
+      let items = document.querySelectorAll(".menu-card");
+      document.querySelectorAll(".categories button").forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+      items.forEach(item => {
+        if (category === "all" || item.classList.contains(category)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
 // ✅ Search functionality with "no result" message
 const searchInput = document.getElementById("searchInput");
 const sections = document.querySelectorAll(".menu-container");
