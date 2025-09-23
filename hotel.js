@@ -80,7 +80,7 @@ if (searchInput) {
             if (!noResultMsg) {
                 noResultMsg = document.createElement("div");
                 noResultMsg.classList.add("no-result");
-                noResultMsg.textContent = "❌ Sorry! Dishes are not available right now.";
+                noResultMsg.textContent = "❌ Sorry! Dish searched is not available right now.";
                 noResultMsg.style.flexBasis = "100%";
                 noResultMsg.style.textAlign = "center";
                 noResultMsg.style.margin = "20px 0";
