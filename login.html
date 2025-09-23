@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Restoff - Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <section class="login-section">
+        <div class="login-form-container">
+            
+            <div id="login-view">
+                <h2 class="section-title">Member Login</h2>
+                <form id="login-form" class="themed-form">
+                    <div class="input-group">
+                        <input type="text" id="login-username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="login-password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" id="login" class="btn">Login</button>
+                </form>
+                <p class="toggle-link">
+                    Don't have an account? <a href="#" id="show-register-link">Register here</a>
+                </p>
+            </div>
+
+            <div id="register-view" class="hidden">
+                <h2 class="section-title">Create Account</h2>
+                <form id="register-form" class="themed-form">
+                    <div class="input-group">
+                        <input type="text" id="register-username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="register-email" name="email" placeholder="Email Address" required>
+                    </div>
+                     <div class="input-group">
+                        <input type="tel" id="register-phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="register-password" name="password" placeholder="Create Password" required>
+                    </div>
+                    <button type="submit" id='registerho' class="btn">Register</button>
+                </form>
+                <p class="toggle-link">
+                    Already have an account? <a href="#" id="show-login-link">Login here</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="first.js"></script>
+</body>
+</html>
